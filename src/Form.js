@@ -1,11 +1,6 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import styled from "styled-components";
-
-export const Container = styled.div`
-  padding: "1rem";
-`;
 
 const Form = () => {
   return (
@@ -24,18 +19,20 @@ const Form = () => {
           handleSubmit
         } = props;
         return (
-          <Container>
-            <div className="field">
-              <label className="label">Email</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="email"
-                  placeholder="e.g. abc@example.com"
-                />
+          <>
+            <Container>
+              <div className="field">
+                <label className="label">Email</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type="email"
+                    placeholder="e.g. abc@example.com"
+                  />
+                </div>
               </div>
-            </div>
-          </Container>
+            </Container>
+          </>
         );
       }}
     </Formik>
