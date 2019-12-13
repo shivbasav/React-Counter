@@ -1,7 +1,13 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { styled } from "styled-system";
 
+const Flex = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
 const Form = () => {
   return (
     <Formik
@@ -19,20 +25,18 @@ const Form = () => {
           handleSubmit
         } = props;
         return (
-          <>
-            <Container>
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    type="email"
-                    placeholder="e.g. abc@example.com"
-                  />
-                </div>
+          <Flex>
+            <div className="field">
+              <label className="label">Email</label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="email"
+                  placeholder="e.g. abc@example.com"
+                />
               </div>
-            </Container>
-          </>
+            </div>
+          </Flex>
         );
       }}
     </Formik>
