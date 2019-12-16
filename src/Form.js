@@ -1,13 +1,14 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { styled } from "styled-system";
+import styled from "styled-components";
 
-const Flex = styled.div`
+export const Flex = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 `;
+
 const Form = () => {
   return (
     <Formik
